@@ -8,6 +8,7 @@ Project NBA {
 Table player_game as PG {
   game_id varchar [pk]
   player_id varchar [pk]
+  team_abbrev varchar
   starter int
   mp varchar
   fg int
@@ -97,4 +98,6 @@ Table games as G {
 Ref: G.game_id < PG.game_id
 Ref: P.player_id < PG.player_id
 Ref: G.game_id < TG.game_id
-Ref: PG.game_id  TG.game_id
+Ref: PG.game_id > TG.game_id
+Ref: PG.team_abbrev > TG.team_abbrev
+Ref: TG.team_abbrev - TG.opponent_abbrev
