@@ -1,0 +1,53 @@
+Project MedicalRecords {
+  database_type: 'PostgreSQL'
+  Note: '''
+    # Patient Records
+    **Database created for patient records, July 2024**
+  '''
+}
+Table primary_keys as PK {
+  patient_name varchar [pk]
+  date_of_birth varchar [pk]
+  prescribed_drug varchar [pk]
+  attending_physician varchar
+  note: "table 'primary_keys' contains the primary keys"
+}
+Table patients as P {
+  patient_name varchar [pk]
+  date_of_birth varchar [pk]
+  patient_sex varchar
+  patient_insurance varchar
+  note: "table 'patients' contains information about patients and their health insurance"
+}
+Table conditions as C {
+  patient_name varchar [pk]
+  date_of_birth varchar [pk]
+  prior_conditions varchar [pk]
+  note: "table 'conditions' contains information about existing conditions within patients"
+}
+Table drugs as D {
+  prescribed_drug varchar [pk]
+  drug_maker varchar
+  drug_cost float
+  note: "table 'drugs' contains information about the drug makers and their costs"
+}
+Table physicians as PH {
+  attending_physician varchar [pk]
+  AP_medschool varchar
+  AP_years_experience int
+  hospital varchar
+  note: "table 'physicians' contains information about the physicians and their work experience"
+}
+Table hospitals as H {
+  hospital varchar [pk]
+  hospital_location varchar
+  note: "table 'hospitals' contains information about the hospitals and their locations"
+}
+
+Ref: D.prescribed_drug < PK.prescribed_drug
+Ref: PH.attending_physician < PK.attending_physician
+Ref: P.patient_name < PK.patient_name
+Ref: P.date_of_birth < PK.date_of_birth
+Ref: C.patient_name - PK.patient_name
+Ref: C.date_of_birth - PK.date_of_birth
+Ref: PH.hospital - H.hospital 
