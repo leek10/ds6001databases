@@ -8923,7 +8923,8 @@ a.anchor-link {
 <span class="s1">    FROM chapters chap</span>
 <span class="s1">INNER JOIN works w</span>
 <span class="s1">    ON chap.workid = w.workid</span>
-<span class="s1">WHERE LOWER(chap.description) LIKE '</span><span class="si">%%</span><span class="s1">palace</span><span class="si">%%</span><span class="s1">'    </span>
+<span class="s1">WHERE LOWER(chap.description) LIKE '</span><span class="si">%%</span><span class="s1">palace</span><span class="si">%%</span><span class="s1">'</span>
+<span class="s1">    OR LOWER(chap.description) LIKE '</span><span class="si">%%</span><span class="s1">castle</span><span class="si">%%</span><span class="s1">'   </span>
 <span class="s1">'''</span>
 
 <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">query_e</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
@@ -9007,35 +9008,35 @@ a.anchor-link {
 <td>...</td>
 </tr>
 <tr>
-<th>120</th>
+<th>181</th>
 <td>The Winter's Tale</td>
 <td>5.0</td>
 <td>1.0</td>
 <td>A room in LEONTES' palace.</td>
 </tr>
 <tr>
-<th>121</th>
+<th>182</th>
 <td>The Winter's Tale</td>
 <td>4.0</td>
 <td>2.0</td>
 <td>Bohemia. The palace of POLIXENES.</td>
 </tr>
 <tr>
-<th>122</th>
+<th>183</th>
 <td>The Winter's Tale</td>
 <td>2.0</td>
 <td>3.0</td>
 <td>A room in LEONTES' palace.</td>
 </tr>
 <tr>
-<th>123</th>
+<th>184</th>
 <td>The Winter's Tale</td>
 <td>2.0</td>
 <td>1.0</td>
 <td>A room in LEONTES' palace.</td>
 </tr>
 <tr>
-<th>124</th>
+<th>185</th>
 <td>The Winter's Tale</td>
 <td>1.0</td>
 <td>1.0</td>
@@ -9043,7 +9044,7 @@ a.anchor-link {
 </tr>
 </tbody>
 </table>
-<p>125 rows × 4 columns</p>
+<p>186 rows × 4 columns</p>
 </div>
 </div>
 </div>
@@ -9702,7 +9703,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>InsertManyResult([ObjectId('669eb5b4746b64a040441259'), ObjectId('669eb5b4746b64a04044125a'), ObjectId('669eb5b4746b64a04044125b'), ObjectId('669eb5b4746b64a04044125c'), ObjectId('669eb5b4746b64a04044125d'), ObjectId('669eb5b4746b64a04044125e'), ObjectId('669eb5b4746b64a04044125f'), ObjectId('669eb5b4746b64a040441260'), ObjectId('669eb5b4746b64a040441261'), ObjectId('669eb5b4746b64a040441262'), ObjectId('669eb5b4746b64a040441263'), ObjectId('669eb5b4746b64a040441264'), ObjectId('669eb5b4746b64a040441265'), ObjectId('669eb5b4746b64a040441266'), ObjectId('669eb5b4746b64a040441267'), ObjectId('669eb5b4746b64a040441268'), ObjectId('669eb5b4746b64a040441269'), ObjectId('669eb5b4746b64a04044126a'), ObjectId('669eb5b4746b64a04044126b'), ObjectId('669eb5b4746b64a04044126c'), ObjectId('669eb5b4746b64a04044126d'), ObjectId('669eb5b4746b64a04044126e'), ObjectId('669eb5b4746b64a04044126f'), ObjectId('669eb5b4746b64a040441270'), ObjectId('669eb5b4746b64a040441271'), ObjectId('669eb5b4746b64a040441272'), ObjectId('669eb5b4746b64a040441273'), ObjectId('669eb5b4746b64a040441274'), ObjectId('669eb5b4746b64a040441275'), ObjectId('669eb5b4746b64a040441276'), ObjectId('669eb5b4746b64a040441277'), ObjectId('669eb5b4746b64a040441278'), ObjectId('669eb5b4746b64a040441279'), ObjectId('669eb5b4746b64a04044127a'), ObjectId('669eb5b4746b64a04044127b'), ObjectId('669eb5b4746b64a04044127c'), ObjectId('669eb5b4746b64a04044127d'), ObjectId('669eb5b4746b64a04044127e'), ObjectId('669eb5b4746b64a04044127f'), ObjectId('669eb5b4746b64a040441280'), ObjectId('669eb5b4746b64a040441281'), ObjectId('669eb5b4746b64a040441282'), ObjectId('669eb5b4746b64a040441283'), ObjectId('669eb5b4746b64a040441284'), ObjectId('669eb5b4746b64a040441285'), ObjectId('669eb5b4746b64a040441286'), ObjectId('669eb5b4746b64a040441287'), ObjectId('669eb5b4746b64a040441288'), ObjectId('669eb5b4746b64a040441289'), ObjectId('669eb5b4746b64a04044128a'), ObjectId('669eb5b4746b64a04044128b'), ObjectId('669eb5b4746b64a04044128c'), ObjectId('669eb5b4746b64a04044128d'), ObjectId('669eb5b4746b64a04044128e'), ObjectId('669eb5b4746b64a04044128f'), ObjectId('669eb5b4746b64a040441290'), ObjectId('669eb5b4746b64a040441291'), ObjectId('669eb5b4746b64a040441292'), ObjectId('669eb5b4746b64a040441293'), ObjectId('669eb5b4746b64a040441294'), ObjectId('669eb5b4746b64a040441295'), ObjectId('669eb5b4746b64a040441296'), ObjectId('669eb5b4746b64a040441297'), ObjectId('669eb5b4746b64a040441298'), ObjectId('669eb5b4746b64a040441299'), ObjectId('669eb5b4746b64a04044129a'), ObjectId('669eb5b4746b64a04044129b'), ObjectId('669eb5b4746b64a04044129c'), ObjectId('669eb5b4746b64a04044129d'), ObjectId('669eb5b4746b64a04044129e'), ObjectId('669eb5b4746b64a04044129f'), ObjectId('669eb5b4746b64a0404412a0'), ObjectId('669eb5b4746b64a0404412a1'), ObjectId('669eb5b4746b64a0404412a2'), ObjectId('669eb5b4746b64a0404412a3'), ObjectId('669eb5b4746b64a0404412a4'), ObjectId('669eb5b4746b64a0404412a5'), ObjectId('669eb5b4746b64a0404412a6'), ObjectId('669eb5b4746b64a0404412a7'), ObjectId('669eb5b4746b64a0404412a8'), ObjectId('669eb5b4746b64a0404412a9'), ObjectId('669eb5b4746b64a0404412aa'), ObjectId('669eb5b4746b64a0404412ab'), ObjectId('669eb5b4746b64a0404412ac'), ObjectId('669eb5b4746b64a0404412ad'), ObjectId('669eb5b4746b64a0404412ae'), ObjectId('669eb5b4746b64a0404412af'), ObjectId('669eb5b4746b64a0404412b0'), ObjectId('669eb5b4746b64a0404412b1'), ObjectId('669eb5b4746b64a0404412b2'), ObjectId('669eb5b4746b64a0404412b3'), ObjectId('669eb5b4746b64a0404412b4'), ObjectId('669eb5b4746b64a0404412b5'), ObjectId('669eb5b4746b64a0404412b6'), ObjectId('669eb5b4746b64a0404412b7'), ObjectId('669eb5b4746b64a0404412b8'), ObjectId('669eb5b4746b64a0404412b9'), ObjectId('669eb5b4746b64a0404412ba'), ObjectId('669eb5b4746b64a0404412bb'), ObjectId('669eb5b4746b64a0404412bc'), ObjectId('669eb5b4746b64a0404412bd'), ObjectId('669eb5b4746b64a0404412be'), ObjectId('669eb5b4746b64a0404412bf'), ObjectId('669eb5b4746b64a0404412c0'), ObjectId('669eb5b4746b64a0404412c1'), ObjectId('669eb5b4746b64a0404412c2'), ObjectId('669eb5b4746b64a0404412c3'), ObjectId('669eb5b4746b64a0404412c4'), ObjectId('669eb5b4746b64a0404412c5'), ObjectId('669eb5b4746b64a0404412c6'), ObjectId('669eb5b4746b64a0404412c7'), ObjectId('669eb5b4746b64a0404412c8'), ObjectId('669eb5b4746b64a0404412c9'), ObjectId('669eb5b4746b64a0404412ca'), ObjectId('669eb5b4746b64a0404412cb'), ObjectId('669eb5b4746b64a0404412cc'), ObjectId('669eb5b4746b64a0404412cd'), ObjectId('669eb5b4746b64a0404412ce'), ObjectId('669eb5b4746b64a0404412cf'), ObjectId('669eb5b4746b64a0404412d0'), ObjectId('669eb5b4746b64a0404412d1'), ObjectId('669eb5b4746b64a0404412d2'), ObjectId('669eb5b4746b64a0404412d3'), ObjectId('669eb5b4746b64a0404412d4'), ObjectId('669eb5b4746b64a0404412d5'), ObjectId('669eb5b4746b64a0404412d6'), ObjectId('669eb5b4746b64a0404412d7'), ObjectId('669eb5b4746b64a0404412d8'), ObjectId('669eb5b4746b64a0404412d9'), ObjectId('669eb5b4746b64a0404412da'), ObjectId('669eb5b4746b64a0404412db'), ObjectId('669eb5b4746b64a0404412dc'), ObjectId('669eb5b4746b64a0404412dd'), ObjectId('669eb5b4746b64a0404412de'), ObjectId('669eb5b4746b64a0404412df'), ObjectId('669eb5b4746b64a0404412e0'), ObjectId('669eb5b4746b64a0404412e1'), ObjectId('669eb5b4746b64a0404412e2'), ObjectId('669eb5b4746b64a0404412e3'), ObjectId('669eb5b4746b64a0404412e4'), ObjectId('669eb5b4746b64a0404412e5'), ObjectId('669eb5b4746b64a0404412e6'), ObjectId('669eb5b4746b64a0404412e7'), ObjectId('669eb5b4746b64a0404412e8'), ObjectId('669eb5b4746b64a0404412e9')], acknowledged=True)</pre>
+<pre>InsertManyResult([ObjectId('66a061096683e350b2da2586'), ObjectId('66a061096683e350b2da2587'), ObjectId('66a061096683e350b2da2588'), ObjectId('66a061096683e350b2da2589'), ObjectId('66a061096683e350b2da258a'), ObjectId('66a061096683e350b2da258b'), ObjectId('66a061096683e350b2da258c'), ObjectId('66a061096683e350b2da258d'), ObjectId('66a061096683e350b2da258e'), ObjectId('66a061096683e350b2da258f'), ObjectId('66a061096683e350b2da2590'), ObjectId('66a061096683e350b2da2591'), ObjectId('66a061096683e350b2da2592'), ObjectId('66a061096683e350b2da2593'), ObjectId('66a061096683e350b2da2594'), ObjectId('66a061096683e350b2da2595'), ObjectId('66a061096683e350b2da2596'), ObjectId('66a061096683e350b2da2597'), ObjectId('66a061096683e350b2da2598'), ObjectId('66a061096683e350b2da2599'), ObjectId('66a061096683e350b2da259a'), ObjectId('66a061096683e350b2da259b'), ObjectId('66a061096683e350b2da259c'), ObjectId('66a061096683e350b2da259d'), ObjectId('66a061096683e350b2da259e'), ObjectId('66a061096683e350b2da259f'), ObjectId('66a061096683e350b2da25a0'), ObjectId('66a061096683e350b2da25a1'), ObjectId('66a061096683e350b2da25a2'), ObjectId('66a061096683e350b2da25a3'), ObjectId('66a061096683e350b2da25a4'), ObjectId('66a061096683e350b2da25a5'), ObjectId('66a061096683e350b2da25a6'), ObjectId('66a061096683e350b2da25a7'), ObjectId('66a061096683e350b2da25a8'), ObjectId('66a061096683e350b2da25a9'), ObjectId('66a061096683e350b2da25aa'), ObjectId('66a061096683e350b2da25ab'), ObjectId('66a061096683e350b2da25ac'), ObjectId('66a061096683e350b2da25ad'), ObjectId('66a061096683e350b2da25ae'), ObjectId('66a061096683e350b2da25af'), ObjectId('66a061096683e350b2da25b0'), ObjectId('66a061096683e350b2da25b1'), ObjectId('66a061096683e350b2da25b2'), ObjectId('66a061096683e350b2da25b3'), ObjectId('66a061096683e350b2da25b4'), ObjectId('66a061096683e350b2da25b5'), ObjectId('66a061096683e350b2da25b6'), ObjectId('66a061096683e350b2da25b7'), ObjectId('66a061096683e350b2da25b8'), ObjectId('66a061096683e350b2da25b9'), ObjectId('66a061096683e350b2da25ba'), ObjectId('66a061096683e350b2da25bb'), ObjectId('66a061096683e350b2da25bc'), ObjectId('66a061096683e350b2da25bd'), ObjectId('66a061096683e350b2da25be'), ObjectId('66a061096683e350b2da25bf'), ObjectId('66a061096683e350b2da25c0'), ObjectId('66a061096683e350b2da25c1'), ObjectId('66a061096683e350b2da25c2'), ObjectId('66a061096683e350b2da25c3'), ObjectId('66a061096683e350b2da25c4'), ObjectId('66a061096683e350b2da25c5'), ObjectId('66a061096683e350b2da25c6'), ObjectId('66a061096683e350b2da25c7'), ObjectId('66a061096683e350b2da25c8'), ObjectId('66a061096683e350b2da25c9'), ObjectId('66a061096683e350b2da25ca'), ObjectId('66a061096683e350b2da25cb'), ObjectId('66a061096683e350b2da25cc'), ObjectId('66a061096683e350b2da25cd'), ObjectId('66a061096683e350b2da25ce'), ObjectId('66a061096683e350b2da25cf'), ObjectId('66a061096683e350b2da25d0'), ObjectId('66a061096683e350b2da25d1'), ObjectId('66a061096683e350b2da25d2'), ObjectId('66a061096683e350b2da25d3'), ObjectId('66a061096683e350b2da25d4'), ObjectId('66a061096683e350b2da25d5'), ObjectId('66a061096683e350b2da25d6'), ObjectId('66a061096683e350b2da25d7'), ObjectId('66a061096683e350b2da25d8'), ObjectId('66a061096683e350b2da25d9'), ObjectId('66a061096683e350b2da25da'), ObjectId('66a061096683e350b2da25db'), ObjectId('66a061096683e350b2da25dc'), ObjectId('66a061096683e350b2da25dd'), ObjectId('66a061096683e350b2da25de'), ObjectId('66a061096683e350b2da25df'), ObjectId('66a061096683e350b2da25e0'), ObjectId('66a061096683e350b2da25e1'), ObjectId('66a061096683e350b2da25e2'), ObjectId('66a061096683e350b2da25e3'), ObjectId('66a061096683e350b2da25e4'), ObjectId('66a061096683e350b2da25e5'), ObjectId('66a061096683e350b2da25e6'), ObjectId('66a061096683e350b2da25e7'), ObjectId('66a061096683e350b2da25e8'), ObjectId('66a061096683e350b2da25e9'), ObjectId('66a061096683e350b2da25ea'), ObjectId('66a061096683e350b2da25eb'), ObjectId('66a061096683e350b2da25ec'), ObjectId('66a061096683e350b2da25ed'), ObjectId('66a061096683e350b2da25ee'), ObjectId('66a061096683e350b2da25ef'), ObjectId('66a061096683e350b2da25f0'), ObjectId('66a061096683e350b2da25f1'), ObjectId('66a061096683e350b2da25f2'), ObjectId('66a061096683e350b2da25f3'), ObjectId('66a061096683e350b2da25f4'), ObjectId('66a061096683e350b2da25f5'), ObjectId('66a061096683e350b2da25f6'), ObjectId('66a061096683e350b2da25f7'), ObjectId('66a061096683e350b2da25f8'), ObjectId('66a061096683e350b2da25f9'), ObjectId('66a061096683e350b2da25fa'), ObjectId('66a061096683e350b2da25fb'), ObjectId('66a061096683e350b2da25fc'), ObjectId('66a061096683e350b2da25fd'), ObjectId('66a061096683e350b2da25fe'), ObjectId('66a061096683e350b2da25ff'), ObjectId('66a061096683e350b2da2600'), ObjectId('66a061096683e350b2da2601'), ObjectId('66a061096683e350b2da2602'), ObjectId('66a061096683e350b2da2603'), ObjectId('66a061096683e350b2da2604'), ObjectId('66a061096683e350b2da2605'), ObjectId('66a061096683e350b2da2606'), ObjectId('66a061096683e350b2da2607'), ObjectId('66a061096683e350b2da2608'), ObjectId('66a061096683e350b2da2609'), ObjectId('66a061096683e350b2da260a'), ObjectId('66a061096683e350b2da260b'), ObjectId('66a061096683e350b2da260c'), ObjectId('66a061096683e350b2da260d'), ObjectId('66a061096683e350b2da260e'), ObjectId('66a061096683e350b2da260f'), ObjectId('66a061096683e350b2da2610'), ObjectId('66a061096683e350b2da2611'), ObjectId('66a061096683e350b2da2612'), ObjectId('66a061096683e350b2da2613'), ObjectId('66a061096683e350b2da2614'), ObjectId('66a061096683e350b2da2615'), ObjectId('66a061096683e350b2da2616')], acknowledged=True)</pre>
 </div>
 </div>
 </div>
@@ -10689,7 +10690,7 @@ a.anchor-link {
 <th>25</th>
 <td>Hungary</td>
 <td>2011</td>
-<td>0.697058</td>
+<td>0.400000</td>
 </tr>
 <tr>
 <th>26</th>
